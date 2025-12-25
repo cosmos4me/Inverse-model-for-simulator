@@ -23,7 +23,7 @@ The model utilizes a **1D U-Net** architecture conditioned via **FiLM (Feature-w
 3.  **Frequency Domain (FFT):**
 4.  **Phase Space Reconstruction (Dynamics):**
 <div align="center">
-  <img src="images/캡처5.PNG" alt="Gaussian Noise Input" width="50%">
+  <img src="images/캡처5.PNG" alt="Gaussian Noise Input" width="80%">
 </div>
 
 ## 🛡️ Robustness Analysis: Noise & Drift
