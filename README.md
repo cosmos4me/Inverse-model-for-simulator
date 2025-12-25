@@ -33,10 +33,12 @@ To evaluate the model's stability under these harsh conditions, we conducted str
 ### 2. Performance Observations
 
 <div align="center">
-  <img src="images/캡처1.PNG" alt="Gaussian Noise Input" width="45%">
-  <img src="./images/캡쳐2.png" alt="Gaussian Noise Test" width="45%">
-  <img src="./images/캡쳐3.png" alt="Drift Noise Input" width="45%">
-  <img src="./images/캡쳐4.png" alt="Drift Noise Test" width="45%">
+  <img src="images/캡처1.PNG" alt="Gaussian Noise Input" width="75%">
+  <img src="images/캡쳐2.PNG" alt="Gaussian Noise Test" width="75%">
+</div>
+<div align="center">
+  <img src="images/캡쳐3.PNG" alt="Drift Noise Input" width="75%">
+  <img src="images/캡쳐4.PNG" alt="Drift Noise Test" width="75%">
 </div>
 
 ## 📂 Project Structure
