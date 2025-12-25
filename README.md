@@ -18,6 +18,14 @@ The model utilizes a **1D U-Net** architecture conditioned via **FiLM (Feature-w
 | **RMSE** | 0.2494 $\mu A/cm^2$ | 
 | **MAE** | 0.1783 $\mu A/cm^2$ |
 
+1.  **Time Domain (Signal Fidelity):**
+2.  **Derivative Domain ($dI/dt$):**
+3.  **Frequency Domain (FFT):**
+4.  **Phase Space Reconstruction (Dynamics):**
+<div align="center">
+  <img src="images/캡처5.PNG" alt="Gaussian Noise Input" width="50%">
+</div>
+
 ## 🛡️ Robustness Analysis: Noise & Drift
 
 Neural recordings in real-world scenarios are rarely clean. They suffer from high-frequency thermal noise and low-frequency baseline drifts caused by electrode instability or movement artifacts.
