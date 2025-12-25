@@ -8,12 +8,26 @@ This repository contains an implementation of **Inverse Flow Matching** for reco
 
 The model utilizes a **1D U-Net** architecture conditioned via **FiLM (Feature-wise Linear Modulation)** and is trained with a **Hybrid Spectral Loss** for high-fidelity signal reconstruction.
 
-| Metric | Value | Interpretation |
-| :--- | :--- | :--- |
+
+## 📊 Results (using test set / split entire data set to train/val/test)
+
+| Metric | Value | 
+| :--- | :--- |
 | **Global $R^2$ Score** | **0.9937** |
 | **Avg Correlation** | **0.9952** |
 | **RMSE** | 0.2494 $\mu A/cm^2$ | 
 | **MAE** | 0.1783 $\mu A/cm^2$ |
+
+## 🛡️ Robustness Analysis
+I evaluated the model's stability under low Signal-to-Noise Ratio (SNR) conditions to simulate real-world recording artifacts.
+
+**Experiment Setup:**
+- **Noise Injection:** Gaussian noise ($\sigma=0.4$) was added to the normalized voltage traces. This represents a significant degradation of the input signal.
+- **Preprocessing:** The derivative ($dV/dt$) was re-calculated from the noisy input to test the model's sensitivity to high-frequency fluctuations.
+
+**Observations:**
+![Robustness Test Result](./images/robust1.png)
+
 
 ## 📂 Project Structure
 
