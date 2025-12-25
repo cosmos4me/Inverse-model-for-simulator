@@ -17,13 +17,16 @@ The model utilizes a **1D U-Net** architecture conditioned via **FiLM (Feature-w
 | **Avg Correlation** | **0.9952** |
 | **RMSE** | 0.2494 $\mu A/cm^2$ | 
 | **MAE** | 0.1783 $\mu A/cm^2$ |
+<div align="center">
+  <img src="images/캡처6.PNG" alt="Example of prediction" width="80%">
+</div>
 
 1.  **Time Domain (Signal Fidelity):**
 2.  **Derivative Domain ($dI/dt$):**
 3.  **Frequency Domain (FFT):**
 4.  **Phase Space Reconstruction (Dynamics):**
 <div align="center">
-  <img src="images/캡처5.PNG" alt="Gaussian Noise Input" width="80%">
+  <img src="images/캡처5.PNG" alt="4 Graph to check model" width="80%">
 </div>
 
 ## 🛡️ Robustness Analysis: Noise & Drift
