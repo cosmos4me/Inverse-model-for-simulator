@@ -27,15 +27,17 @@ To evaluate the model's stability under these harsh conditions, we conducted str
 | Noise Type | Simulation Method | Real-world Analogy |
 | :--- | :--- | :--- |
 | **Gaussian Noise** | Added random normal distribution ($\sigma=0.4$) to $V$. | Thermal noise, amplifier hiss, electronic interference. |
-| **B. Baseline Drift** | Sinusoidal Wander | $Amp=0.2$, $Freq=0.4 Hz$ | Electrode movement, breathing artifacts. |
+| **Gaussian Noise** | Sinusoidal Wander | $Amp=0.2$, $Freq=0.4 Hz$ | Electrode movement, breathing artifacts. |
 
 > **Note:** For both tests, the derivative inputs ($dV/dt$, $dK/dt$) were **re-calculated from the noisy/drifted traces** to ensure a realistic evaluation pipeline.
 ### 2. Performance Observations
-
+Gaussian Noise
 <div align="center">
   <img src="images/캡처1.PNG" alt="Gaussian Noise Input" width="75%">
   <img src="images/캡처2.PNG" alt="Gaussian Noise Test" width="75%">
 </div>
+
+Gaussian Noise
 <div align="center">
   <img src="images/캡처3.PNG" alt="Drift Noise Input" width="75%">
   <img src="images/캡처4.PNG" alt="Drift Noise Test" width="75%">
