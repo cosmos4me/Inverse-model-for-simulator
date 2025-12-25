@@ -18,16 +18,26 @@ The model utilizes a **1D U-Net** architecture conditioned via **FiLM (Feature-w
 | **RMSE** | 0.2494 $\mu A/cm^2$ | 
 | **MAE** | 0.1783 $\mu A/cm^2$ |
 
-## 🛡️ Robustness Analysis
-I evaluated the model's stability under low Signal-to-Noise Ratio (SNR) conditions to simulate real-world recording artifacts.
+## 🛡️ Robustness Analysis: Noise & Drift
 
-**Experiment Setup:**
-- **Noise Injection:** Gaussian noise ($\sigma=0.4$) was added to the normalized voltage traces. This represents a significant degradation of the input signal.
-- **Preprocessing:** The derivative ($dV/dt$) was re-calculated from the noisy input to test the model's sensitivity to high-frequency fluctuations.
+Neural recordings in real-world scenarios are rarely clean. They suffer from high-frequency thermal noise and low-frequency baseline drifts caused by electrode instability or movement artifacts.
+To evaluate the model's stability under these harsh conditions, we conducted stress tests using **Gaussian Noise** and **Baseline Drift**.
+### 1. Test Conditions
 
-**Observations:**
-![Robustness Test Result](./images/robust1.png)
+| Noise Type | Simulation Method | Real-world Analogy |
+| :--- | :--- | :--- |
+| **Gaussian Noise** | Added random normal distribution ($\sigma=0.4$) to $V$. | Thermal noise, amplifier hiss, electronic interference. |
+| **Baseline Drift** | Added low-frequency sine wave: $A \cdot \sin(2\pi f t)$ | Electrode movement, breathing artifacts, chemical instability. |
 
+> **Note:** For both tests, the derivative inputs ($dV/dt$, $dK/dt$) were **re-calculated from the noisy/drifted traces** to ensure a realistic evaluation pipeline.
+### 2. Performance Observations
+
+<div align="center">
+  <img src="./images/캡쳐1.png" alt="Gaussian Noise Input" width="45%">
+  <img src="./images/캡쳐2.png" alt="Gaussian Noise Test" width="45%">
+  <img src="./images/캡쳐3.png" alt="Drift Noise Input" width="45%">
+  <img src="./images/캡쳐4.png" alt="Drift Noise Test" width="45%">
+</div>
 
 ## 📂 Project Structure
 
