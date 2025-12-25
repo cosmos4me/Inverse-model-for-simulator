@@ -21,6 +21,8 @@ The model utilizes a **1D U-Net** architecture conditioned via **FiLM (Feature-w
   <img src="images/캡처6.PNG" alt="Example of prediction" width="80%">
 </div>
 
+
+
 1.  **Time Domain (Signal Fidelity):**
 2.  **Derivative Domain ($dI/dt$):**
 3.  **Frequency Domain (FFT):**
